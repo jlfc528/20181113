@@ -66,6 +66,7 @@
   }
 
   function onDataFetched(response) {
+    console.log("fetch");
     if (response.error) {
       alert('Unable to fetch data. ' + response.error.message +
           ' (' + response.error.code + ')');
@@ -85,6 +86,7 @@
   }
 
   function drawHeatmap(locations) {
+    console.log(locations);
     var heatmap = new google.maps.visualization.HeatmapLayer({
        dissipating: true,
        gradient: [
