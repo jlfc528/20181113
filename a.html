@@ -34,6 +34,14 @@
 
   function initialize() {
      gapi.client.setApiKey("AIzaSyCpjG02gaAh6QmhTJu0v6AgS7Dr6SrajbE");
+      gapi.auth.authorize({
+        'client_id': "574301998218-m4hukvqt7ujegnt3climq3ehc480b0rt.apps.googleusercontent.com",
+        'scope': 'https://www.googleapis.com/auth/fusiontables', //or other scope
+        'immediate': false
+    }, function() {
+        console.log("dddd");
+        //Execute this on successful auth like create another UI
+    });
     var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
       (navigator.userAgent.match(/(iPod|iPhone|iPad|BlackBerry|Windows Phone|iemobile)/));
     if (isMobile) {
