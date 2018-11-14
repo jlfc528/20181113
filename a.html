@@ -83,7 +83,7 @@
       var row = rows[i];
       if (row[0]) {
         var item = row[0].split(",");
-        locations.push({lat:item[0],lon:item[1]})
+        locations.push({"location":row[0],"weight":row[1]})
       }
     }
     return locations;
