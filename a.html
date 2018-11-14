@@ -50,6 +50,7 @@
     var query = 'select col2, col1 from 1WWOUl9MUkjbit0aX7GtaY7YG6AlYOcsEST4LLZkq limit 1000';
     var request = gapi.client.fusiontables.query.sqlGet({ sql: query });
     request.execute(function(response) {
+      console.log(response);
       onDataFetched(response);
     });
   }
