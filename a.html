@@ -82,9 +82,9 @@
       console.log(i)
       var row = rows[i];
       if (row[0]) {
-        new google.maps.LatLng($lat, $lon),
+      
         var item = row[0].split(",");
-        locations.push({"location":google.maps.LatLng(item[0],item[1]),"weight":row[1]})
+        locations.push({"location":new  google.maps.LatLng(item[0],item[1]),"weight":row[1]})
       }
     }
     
