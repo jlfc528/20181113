@@ -34,7 +34,7 @@
 
   function initialize() {
      gapi.client.setApiKey("AIzaSyCpjG02gaAh6QmhTJu0v6AgS7Dr6SrajbE");
-   /*   gapi.auth.authorize({
+      gapi.auth.authorize({
         'client_id': "574301998218-m4hukvqt7ujegnt3climq3ehc480b0rt.apps.googleusercontent.com",
         'scope': 'https://www.googleapis.com/auth/fusiontables', //or other scope
         'immediate': false
@@ -42,7 +42,7 @@
         console.log("dddd");
         //Execute this on successful auth like create another UI
     });
-   */
+   
    var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) ||
       (navigator.userAgent.match(/(iPod|iPhone|iPad|BlackBerry|Windows Phone|iemobile)/));
     if (isMobile) {
@@ -84,7 +84,7 @@
       if (row[0]) {
       
         var item = row[0].split(",");
-        locations.push({"location":new google.maps.LatLng(item[0],item[1]),"weight":row[1]})
+        locations.push({"location":new google.maps.LatLng(20.00,20.000),"weight":row[1]})
       }
     }
     
