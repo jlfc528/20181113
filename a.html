@@ -112,7 +112,8 @@ var heatMapData = [
   {location: new google.maps.LatLng(37.785, -122.437), weight: 2},
   {location: new google.maps.LatLng(37.785, -122.435), weight: 3}
 ];
-
+console.log(locations);
+    console.log(heatMapData);
    
     var heatmap = new google.maps.visualization.HeatmapLayer({
        dissipating: true,
@@ -132,7 +133,7 @@ var heatMapData = [
        opacity:  0.6 ,
        radius:  31.0 ,
        maxIntensity:10,
-       data: heatMapData
+       data: locations
     });
     
     
