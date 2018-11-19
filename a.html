@@ -95,7 +95,7 @@
 
   function drawHeatmap(locations) {
     console.log(locations);
-    var heatmap = new google.maps.visualization.HeatmapLayer({
+ /*   var heatmap = new google.maps.visualization.HeatmapLayer({
        dissipating: true,
        gradient: [
          'rgba(102,255,0,0.0)', 
@@ -114,6 +114,13 @@
        radius:  31.0 ,
        data: locations
     });
+    
+    */
+    
+      var heatmap = new google.maps.visualization.HeatmapLayer({
+            data: locations,
+            map: map
+            });
     console.log(heatmap);
 
     heatmap.setMap(map);
