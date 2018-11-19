@@ -54,7 +54,7 @@
     mapDiv.style.height = isMobile ? '100%' : '300px';
     map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(22.5898227,120.2931176),
-      zoom: 10,
+      zoom: 4,
       mapTypeId: google.maps.MapTypeId['ROADMAP']
     });
     var query = 'select col2, col1 from 1WWOUl9MUkjbit0aX7GtaY7YG6AlYOcsEST4LLZkq limit 1000';
@@ -140,7 +140,7 @@ var heatMapData = [
  
 
 var heatmap = new google.maps.visualization.HeatmapLayer({
-  data: locations
+  data: heatmapData
 });
     heatmap.setMap(map);
   }
