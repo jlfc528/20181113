@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>chart created with amCharts | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"startDuration": 1,
+					"theme": "dark",
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonColor": "undefined",
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"bullet": "round",
+							"fillColors": "undefined",
+							"id": "AmGraph-1",
+							"lineAlpha": 0.7,
+							"lineColor": "#FFFF69",
+							"lineThickness": 5,
+							"negativeFillAlphas": 0,
+							"tabIndex": 37,
+							"title": "菸蒂檢舉件數",
+							"valueField": "column-1"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": ""
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"useGraphSettings": true
+					},
+					"titles": [
+						{
+							"id": "Title-1",
+							"size": 17,
+							"text": "台北市民國104年-106年菸蒂檢舉件數"
+						},
+{
+							"id": "Title-2",
+							"size": -2,
+							"tabIndex": 0,
+							"text": "（資料來源／台北市環保局）"
+						}
+					],
+					"dataProvider": [
+						{
+							"category": "104年",
+							"column-1": "16287"
+						},
+						{
+							"category": "105年",
+							"column-1": "21304"
+						},
+						{
+							"category": "106年",
+							"column-1": "25317"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #282828;" ></div>
+	</body>
+</html>
