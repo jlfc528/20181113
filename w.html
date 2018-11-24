@@ -115,7 +115,7 @@
           .duration(400)
           .attr('width', x.bandwidth())
           .attr("y", function(d) { return y(d.value); })
-          .attr("height", function(d) { return height - y(d.value); });
+          .attr("height", function(d) { console.log(height - y(d.value));return height - y(d.value); });
 
       //  d3.selectAll('.val').remove()
     }
