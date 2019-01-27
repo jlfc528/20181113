@@ -7,15 +7,17 @@
 
 <body>
 <div id="test"></div>
-<textarea id="content" style="width:200px;height:300px;">
-    tttt
+<textarea id="content" style="width:200px;height:100px;">
+    tttt  tttt  tttt  tttt  tttt  tttt  tttt  tttt
     </textarea>
 
 <script>
 document.body.addEventListener('gestureend', function(e) {
+     document.getElementById("content").style.width=((1/e.scale)*200)+"px";
     if (e.scale < 1.0) {
     document.getElementById("test").innerText = "smaller";
         // User moved fingers closer together
+        
     } else if (e.scale > 1.0) {
         document.getElementById("test").innerText = "bigger";
         // User moved fingers further apart
