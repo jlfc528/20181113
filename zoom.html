@@ -10,7 +10,7 @@
 ttt
 
 <script>
-document.getElementById("test").addEventListener('gestureend', function(e) {
+document.body.addEventListener('gestureend', function(e) {
     if (e.scale < 1.0) {
     document.getElementById("test").innerText = "smaller";
         // User moved fingers closer together
