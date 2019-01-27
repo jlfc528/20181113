@@ -15,11 +15,11 @@
 document.body.addEventListener('gestureend', function(e) {
      document.getElementById("content").style.width=((1/e.scale)*200)+"px";
     if (e.scale < 1.0) {
-    document.getElementById("test").innerText = ((1/e.scale)*200)+"px";
+    document.getElementById("test").innerText = ((5/e.scale)*200)+"px";
         // User moved fingers closer together
         
     } else if (e.scale > 1.0) {
-        document.getElementById("test").innerText = ((1/e.scale)*200)+"px";
+        document.getElementById("test").innerText = ((5/e.scale)*200)+"px";
         // User moved fingers further apart
     }
 }, false);
