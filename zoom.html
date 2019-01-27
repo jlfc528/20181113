@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+</title>
+</head>
+
+<body>
+<div id="test"></div>
+
+
+<script>
+document.getElementById("test").addEventListener('gestureend', function(e) {
+    if (e.scale < 1.0) {
+    document.getElementById("test").innerText = "smaller"'
+        // User moved fingers closer together
+    } else if (e.scale > 1.0) {
+        document.getElementById("test").innerText = "bigger"'
+        // User moved fingers further apart
+    }
+}, false);
+</script>
+</body>
+
+</html>
