@@ -12,10 +12,10 @@
 <script>
 document.getElementById("test").addEventListener('gestureend', function(e) {
     if (e.scale < 1.0) {
-    document.getElementById("test").innerText = "smaller"'
+    document.getElementById("test").innerText = "smaller";
         // User moved fingers closer together
     } else if (e.scale > 1.0) {
-        document.getElementById("test").innerText = "bigger"'
+        document.getElementById("test").innerText = "bigger";
         // User moved fingers further apart
     }
 }, false);
