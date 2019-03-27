@@ -1,8 +1,15 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<input type="text" id="test" />
-<button id="answer"> 回答</button>
 
+<input type="text" id="test" />
+
+<button id="answer">作答</button>
+<p id="panel" style="background-color:gray;width:300px;height:100px;">
+
+</p>
 
 <script>
-$("#answer").click(function(){$("#test").val("yes");});
+$("#answer").click(function(){
+   var q = $("#test").val();
+  $("#panel").text(q);
+});
 </script>
