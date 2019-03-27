@@ -9,7 +9,7 @@
 
 <script>
   
- var q_list = [{"topic":"公投第一題","anwer":"a1"},{"topic":"公投第二題","answer":"a2"}];
+ var q_list = [{"topic":"公投第一題","asnwer":"a1"},{"topic":"公投第二題","answer":"a2"}];
  var a_list = {"a1":"反空汙","a2":"反深澳電廠"};
    
    
@@ -17,7 +17,7 @@ $("#answer").click(function(){
    var q = $("#test").val();
    for(var i in q_list){
       if(q_list[i]["topic"].indexOf(q) > -1){
-         var a = q_list[i]["topic"];
+         var a = q_list[i];
           $("#panel").text(a_list[a["answer"]]);
          return;
       }
