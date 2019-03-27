@@ -3,13 +3,27 @@
 <input type="text" id="test" />
 
 <button id="answer">作答</button>
-<p id="panel" style="background-color:gray;width:300px;height:100px;">
+<p id="panel" style="background-color:gray;width:300px;height:100px;color:white;">
 
 </p>
 
 <script>
+  
+ var q_list = [{"topic":"公投第一題","anwer":"a1"},{"topic":"公投第二題","answer":"a2"}];
+ var a_list = {"a1":"反空汙","a2":"反深澳電廠"};
+   
+   
 $("#answer").click(function(){
    var q = $("#test").val();
-  $("#panel").text(q);
+   for(var i in q_list){
+      if(q_list[i]["topic"].indexOf(q) > -1){
+         var a = q_list[i]["topic"];
+          $("#panel").text(a_list[a["answer"]]);
+         return;
+      }
+   }
+   $("#panel").text("無此選項");
+   
+  
 });
 </script>
